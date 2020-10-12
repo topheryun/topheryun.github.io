@@ -588,20 +588,381 @@ Sunken City Only Predator Pack
 	["Serpent Monster", 35],
 	["Ancient of the Deep", 40],
 	["Tritus", 100],
+
+/* ==============================
+Fungal Caverns
+============================== */	
+	["Sporeticus", 15],
+	["Spore Muncher", 15],
+	["Mouldy Mole", 15],
+	["Spiked Burrower", 15],
+	["Bitter Root", 8],
+	["Mush", 8],
+	["Quillback", 8],
+	["Lumahead", 8],
+	["Funglore", 8],
+	["Mushroom Sprite", 10],
+	["Floating Spore", 10],
+	["Nightshade Masquerade", 25],
+
+	["Cavern Crumbler", 10],
+	["Stone Maiden", 10],
+	["Crag Elder", 10],
+	["Dirt Thing", 10],
+	["Crystalline Slasher", 10],
+	["Splintered Stone Sentry", 30], // 26 hunts with GGC
+	["Shattered Obsidian", 20], // 17 hunts with GGC
+	["Gemstone Worshipper", 60], // 57 hunts with GGC
+
+	["Gemorpher", 8],
+	["Crystal Controller", 10],
+	["Crystalback", 10],
+	["Crystal Cave Worm", 25],
+	["Stalagmite", 15],
+
+	["Crystal Golem", 30],
+	["Crystal Queen", 12],
+	["Crystal Lurker", 15],
+	["Crystal Observer", 10],
+
+	["Huntereater", 70],
+	["Diamondhide", 250], // one person lf 250 another sniping for 23? 8%ar with diamond cheese
+	["Crystal Behemoth", 30],
+
+/* ==============================
+Zokor
+============================== */	
+	["Lost Legionnaire", defaultValue],
+	["Lost", defaultValue],
+	["Reanimated Carver", 10],
+	["Corridor Bruiser", 10],
+	["Shadow Stalker", 10],
+
+	["Mushroom Harvester", 10],
+	["Mush Monster", 10],
+	["Nightshade Nanny", 10],
+	["Nightshade Fungalmancer", 15],
+
+	["Summoning Scholar", 8],
+	["Sanguinarian", defaultValue],
+	["Mystic Guardian", 20],
+	["Mystic Herald", 15],
+	["Mystic Scholar", 20],
+	["Ethereal Guardian", 15],
+	["Ancient Scribe", 15],
+	["Soul Binder", 220],
+
+	["Drudge", 10],
+	["Masked Pikeman", defaultValue],
+	["Solemn Soldier", defaultValue],
+	["Mind Tearer", 15],
+	["Dark Templar", 10],
+	["Battle Cleric", 8],
+	["Sir Fleekio", 8],
+	["Paladin Weapon Master", 220],
+
+	["RR-8", 10],
+	["Ash Golem", 10],
+	["Tech Golem", 10],
+	["Automated Stone Sentry", 20],
+	["Fungal Technomorph", 30],
+	["Exo-Tech", 10],
+	["Matron of Machinery", 10],
+	["Manaforge Smith", 220],
+
+	["Hired Eidolon", 15],
+	["Mimic", 10],
+	["Treasure Brawler", 25],
+	["Matron of Wealth", 20],
+	["Molten Midas", 20],
+
+	["Decrepit Tentacle Terror", defaultValue],
+	["Retired Minotaur", 350],
+
+/* ==============================
+Zokor
+============================== */	
+	["Nightshade Maiden", defaultValue],
+	["Spore Salesman", defaultValue],
+	["Nightshade Flower Girl", defaultValue],
+
+	["Breeze Borrower", defaultValue],
+	["Windy Farmer", defaultValue],
+	["Cloud Collector", defaultValue],
+	["Rainwater Purifier", defaultValue],
+	["Homeopathic Apothecary", defaultValue],
+
+	["Wind Watcher", defaultValue],
+	["Charming Chimer", defaultValue],
+	["Fluttering Flutist", defaultValue],
+	["Cycloness", defaultValue],
+	["Wind Warrior", defaultValue],
+
+	["Rain Collector", defaultValue],
+	["Rain Wallower", defaultValue],
+	["Rain Summoner", defaultValue],
+	["Monsoon Maker", defaultValue],
+	["Rainmancer", defaultValue],
+
+	["Thunder Strike", defaultValue],
+	["Violet Stormchild", defaultValue],
+	["Thunderlord", defaultValue], // might not work because emoji in the name, but it's only in Mopi maps
+	["Thundering Watcher", defaultValue],
+	["Dragoon", defaultValue],
+	["Ful'Mina, The Mountain Queen", defaultValue],
+
+/* ==============================
+Floating Isles (not setting values yet)
+============================== */	
+	["Skydiver", defaultValue],
+	["Sky Greaser", defaultValue],
+	["Launchpad Labourer", defaultValue],
+	["Cloud Miner", defaultValue],
+
+	["Daydreamer", defaultValue],
+	["Kite Flyer", defaultValue],
+
+	["Ground Gavaleer", defaultValue],
+	["Sky Swordsman", defaultValue],
+	["Herc", defaultValue],
+	["Sky Squire", defaultValue],
+
+	["Astrological Astronomer", defaultValue],
+	["Overcaster", defaultValue],
+	["Stratocaster", defaultValue],
+	["Shadow Sage", defaultValue],
+
+	["Worried Wayfinder", defaultValue],
+	["Gyrologer", defaultValue],
+	["Seasoned Islandographer", defaultValue],
+	["Captain Cloudkicker", defaultValue],
+
+	["Sky Glass Sorcerer", defaultValue],
+	["Sky Glass Galzier", defaultValue],
+	["Sky Dancer", defaultValue],
+	["Sky Highborne", defaultValue],
+
+	["Spry Sky Explorer", defaultValue],
+	["Spry Sky Seer", defaultValue],
+	["Cumulost", defaultValue],
+	["Spheric Diviner", defaultValue],
+
+	["Nimbomancer", defaultValue],
+	["Sky Surfer", defaultValue],
+	["Cute Cloud Conjurer", defaultValue],
+	["Mist Maker", defaultValue],
+
+	["Tiny Dragonfly", defaultValue],
+	["Lancer Guard", defaultValue],
+	["Dragonbreather", defaultValue],
+	["Regal Spearman", defaultValue],
+
+	["Devious Gentleman", defaultValue],
+	["Stack of Thieves", defaultValue],
+	["Lawbender", defaultValue],
+	["Agent M", defaultValue],
+
+	["Suave Pirate", defaultValue],
+	["Cutthroat Pirate", defaultValue],
+	["Cutthroat Cannoneer", defaultValue],
+	["Scarlet Revenger", defaultValue],
+	["Maritime Pirate", defaultValue],
+	["Admiral Cloudbeard", defaultValue],
+
+	["Warden of Rain", defaultValue],
+	["Warden of Fog", defaultValue],
+	["Warden of Frost", defaultValue],
+	["Warden of Wind", defaultValue],
+
+	["Paragon of Strength", defaultValue],
+	["Paragon of Shadow", defaultValue],
+	["Paragon of Tactics", defaultValue],
+	["Paragon of Arcane", defaultValue],
+	["Paragon of Forgotten", defaultValue],
+	["Paragon of Water", defaultValue],
+	["Paragon of Dragons", defaultValue],
+	["Paragon of the Lawless", defaultValue],
+
+	["Richard the Rich", defaultValue],
+
+/* ==============================
+Gnawnia Rift
+============================== */		
+	["Micro", 20],
+	["Brawny", 10],
+	["Riftweaver", 10],
+	["Greyrun", 8],
+	["Dream Drifter", 35],
+	["Excitable Electric", 15],
+	["Supernatural", 10],
+	["Agitated Gentle Giant", 10],
+	["Mighty Mole", 25],
+
+	["Rift Guardian", 10],
+	["Cyborg", 10],
+	["Shard Centurion", 10],
+	["Spiritual Steel", 10],
+	["Raw Diamond", 15],
+	["Wealth", 10], // better ar in furomarift
+	["Goliath Field", defaultValue],
+
+/* ==============================
+Burroughs Rift
+============================== */		
+	["Amplified White", 15],
+	["Amplified Grey", 15],
+	["Amplified Brown", 15],
+	["Cybernetic Specialist", 10],
+	["Rift Bio Engineer", 8],
+	["Automated Sentry", 15],
+	["Surgeon Bot", 8],
+	["Evil Scientist", 8],
+	["Doktor", 8],
+	["Portable Generator", 30],
+
+	["Prototype", 10],
+	["Robat", 10],
+	["Phase Zombie", 10],
+	["Count Vampire", 12],
+	["Tech Ravenous Zombie", 12],
+	["Zombot Unipire the Third", 10],
+	["Lycanoid", 10],
+	["Revenant", 10],
+
+	["Pneumatic Dirt Displacement", 15],
+	["Itty Bitty Rifty Burroughs", 12],
+	["Rifterranian", 10],
+	["Clump", 15],
+	["Cyber Miner", 20],
+	["Master Exploder", 8],
+	["Boulder Biter", 10],
+
+	["Mecha Tail", 20],
+	["Radioactive Ooze", 15],
+	["Toxikinetic", 15],
+	["Toxic Avenger", 20],
+	["Rancid Bog Beast", 15],
+	["Super Mega Mecha Ultra RoboGold", 10],
+	["Plutonium Tentacle", 20],
+	["Assassin Beast", 45],
+
+	["Menace of the Rift", 25],
+	["Monstrous Abomination", 25],
+	["Big Bad Behemoth Burroughs", 20],
+
+/* ==============================
+Whisker Woods Rift
+============================== */	
+	["Mossy Moosker", 10],
+	["Cranky Caterpillar", 10],
+	["Bloomed Sylvan", 10],
+	["Spirit of Balance", 10],
+	["Fungal Frog", 10],
+	["Karmachameleon", 10],
+	["Red Coat Bear", 10],
+	["Medicine", 10],
+	["Twisted Treant", 10],
+	["Water Sprite", 10],
+	["Treant Queen", 10],
+	["Spirit Fox", 10],
+	["Red-Eyed Watcher Owl", 10],
+	["Rift Tiger", 10],
+	["Nomadic Warrior", 10],
+	["Crazed Goblin", 10],
+	["Tree Troll", 10],
+	["Winged Harpy", 10],
+
+	["Cyclops Barbarian", 30],
+	["Centaur Ranger", 30],
+	["Tri-dra", 30],
+	["Cherry Sprite", 12],
+	["Naturalist", 12],
+	["Grizzled Silth", 12],
+	["Gilded Leaf", 30],
+	["Monstrous Black Widow", defaultValue],
+
+/* ==============================
+Furoma Rift
+============================== */		
+	["Enlightened Labourer", 25],
+	["Dumpling Delivery", 10],
+	["Armored Archer", 10],
+	["Shinobi", 12],
+	["Shaolin Kung Fu", 10],
+	["Wandering Monk", 10],
+	["Militant Samurai", 15],
+	["Dancing Assassin", 10],
+	["Student of the Chi Belt", 12],
+	["Student of the Chi Claw", 12],
+	["Student of the Chi Fang", 12],
+	["Master of the Chi Belt", defaultValue],
+	["Master of the Chi Fang", defaultValue],
+	["Master of the Chi Claw", defaultValue],
+	["Grand Master of the Dojo", defaultValue],
+	["Supreme Sensei", defaultValue],
+	["Ascended Elder", defaultValue],
+
+/* ==============================
+Bristle Woods Rift
+============================== */	
+	["Skeletal Champion", defaultValue],
+	["Record Keeper's Assistant", defaultValue],
+	["Record Keeper", defaultValue],
+	["Sentient Slime", 10],
+	["Dread Knight", defaultValue],
+	["Portal Plunderer", defaultValue],
+	["Clockwork Timespinner", defaultValue],
+	["Epoch Golem", defaultValue],
+	["Chamber Cleaver", 10],
+	["Portal Pursuer", defaultValue],
+	["Vigilant Ward", defaultValue],
+	["Timelost Thaumaturge", 10],
+	["Shackled Servant", defaultValue],
+	["Portal Paladin", defaultValue],
+	["Harbinger of Death", 40],
+	["Timeslither Pythoness", 10],
+	["Carrion Medium", 10],
+	["Timeless Lich", 10],
+	["Chronomaster", 10],
+	["Absolute Acolyte", 20],
+
+/* ==============================
+Valour Rift
+============================== */	
+	["Timid Explorer", defaultValue],
+	["Elixir Maker", defaultValue],
+	["Terrified Adventurer", defaultValue],
+	["Unwavering Adventurer", defaultValue],
+	["Berzerker", defaultValue],
+	["Lumi-lancer", defaultValue],
+	["Puppetto", defaultValue],
+	["Puppet Champion", defaultValue],
+	["Cutpurse", defaultValue],
+	["Champion Thief", defaultValue],
+	["Martial", defaultValue],
+	["Praetorian Champion", defaultValue],
+	["One-Mouse Band", defaultValue],
+	["Champion Danseuse", defaultValue],
+	["Mouse of Elements", defaultValue],
+	["Magic Champion", defaultValue],
+	["Cursed Crusader", defaultValue],
+	["Fallen Champion Footman", defaultValue],
+	["Withered Remains", defaultValue],
+	["Arch Champion Necromancer", defaultValue],
+	["Possessed Armaments", defaultValue],
+	["Prestigious Adventurer", defaultValue],
+	["Soldier of the Shade", defaultValue],
+	["Bulwark of Ascent", defaultValue],
+	["Shade of the Eclipse", defaultValue],
+	["The Total Eclipse", 20],
 	
-	
+/* ==============================
+Toxic Spill
+============================== */	
+
+/* ==============================
+Event Mice
+============================== */	
 	["default", defaultValue],
-
-	
-	
-	
-
-
-
-
-
-
-	
-
 ]);
 
