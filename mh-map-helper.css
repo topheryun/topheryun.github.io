@@ -6,9 +6,9 @@ p { color: white; }
 
 #input-message { padding-top: 10px; padding-bottom: 10px; }
 
-#left { float: left; width: 40%; height: 100%; background: red; }
-#right { float: right; width: 40%; height: 100%; background: blue; }
-#middle { float: left; width: 20%; height: 100%; background: yellow; }
+#left { float: left; width: 35%; height: 100%; }
+#right { float: right; width: 35%; height: 100%; }
+#middle { float: left; width: 30%; height: 100%; }
 
 /* left side */
 #input-div { padding: 25px; height: 420px; width: 303px; }
@@ -16,6 +16,6 @@ p { color: white; }
 #input-button { float: top; position: relative; }
 
 /* right side */
-#results { color: white; border-collapse: collapse; border: 1px; width: 75%; }
+#results { color: rgb(236, 213, 213); border-collapse: collapse; border: 1px; width: 75%; }
 #results th { border: 1px solid #ddd; background: #4CAF50; padding: 8px; }
 #results td { border: 1px solid #ddd; padding: 5px; }
