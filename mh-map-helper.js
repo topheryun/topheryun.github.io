@@ -1,6 +1,6 @@
 
 window.onload=function() {
-    // nothing yet
+    // nothing yet so far
 }
 
 function createResults() {

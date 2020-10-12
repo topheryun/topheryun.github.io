@@ -1,9 +1,7 @@
-/* Background Color */
+
 body { background-color: #43464b; margin-left: 150px; margin-right: 150px; }
-/* Header Text Color */
 h1 { color: white; }
 h2 { color: white; }
-/* Paragraph Text Color */
 p { color: white; }
 
 #input-message { padding-top: 10px; padding-bottom: 10px; }
