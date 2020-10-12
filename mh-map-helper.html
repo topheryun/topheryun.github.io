@@ -2,16 +2,37 @@
 <html>
 <head>
     <title>MH-Map-Helper</title>
-    <link rel="stylesheet" type="text/css" href="mh-map-helper.css">
-    <script type="text/javascript" src="mh-map-helper.js"></script>
+	<link rel="stylesheet" type="text/css" href="MH-Map-Helper.css">
+	<script type="text/javascript" src="MH-Map-Helper.js"></script>
+	<script type="text/javascript" src="miceArray.js"></script>
 </head>
 
 <body>
+<h2 id="input-message">Input mice in your treasure map.</h2>
 
-<h1>Hello World</h1>
-<p>testing github pages</p>
+<div id="left">
+
+	<div id="input-div">
+		<textarea id="input" rows="25" cols="40" onchange="createResults()"></textarea>
+	</div>
+	
+</div>
+
+<div id="middle">
+<p></p>
+</div>
+
+<div id="right">
+
+	<table id="results">
+		<tr> <!-- first row -->
+			<th id="table-head-first">Mouse</th>
+			<th id="table-head-second">Price</th>
+		</tr>
+		<tbody id="result"></tbody> <!-- dynamic rows -->
+	</table>
+	
+</div>
 
 </body>
-
-
 </html>

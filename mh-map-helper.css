@@ -1,8 +1,23 @@
-h1 {
-    color: blue;
-}
+/* Background Color */
+body { background-color: #43464b; margin-left: 150px; margin-right: 150px; }
+/* Header Text Color */
+h1 { color: white; }
+h2 { color: white; }
+/* Paragraph Text Color */
+p { color: white; }
 
-body {
-    background-color: #212121;
-    text-align: center;
-}
+#input-message { padding-top: 10px; padding-bottom: 10px; }
+
+#left { float: left; width: 40%; height: 100%; background: red; }
+#right { float: right; width: 40%; height: 100%; background: blue; }
+#middle { float: left; width: 20%; height: 100%; background: yellow; }
+
+/* left side */
+#input-div { padding: 25px; height: 420px; width: 303px; }
+#input { float: top; position: relative; }
+#input-button { float: top; position: relative; }
+
+/* right side */
+#results { color: white; border-collapse: collapse; border: 1px; width: 75%; }
+#results th { border: 1px solid #ddd; background: #4CAF50; padding: 8px; }
+#results td { border: 1px solid #ddd; padding: 5px; }
