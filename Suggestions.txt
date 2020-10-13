@@ -1,0 +1,21 @@
+How will you deal with fluctuating prices? e.g. Icewing has dropped massively in the last few weeks now deep is on more maps.
+
+also it there a way to get it to automatically pick up the mice on the map, like the MH Tools tool? (https://tsitu.github.io/MH-Tools/map.html)
+
+==================================================
+
+If you're scraping values from #map-snipers, I think I'd like to see a range (average +/- deviation, or confidence values) instead of a specific number, after eliminating outliers. That gives me a better idea of how much it varies and what I can get away with advertising.
+
+Would also like to see loot in a future release.
+
+Even better would be values over time ... so that I know when is a good time to snipe a specific mouse, though that would be a lot more complex to build.
+
+==================================================
+
+I'd probably try and do some kind of rolling average, that eliminates outliers. Like average the last 10 icewings (that have gone for, say, 170-200), but if someone enters in 10 or 400, ignore those entries.
+
+==================================================
+
+Some of the mice have an "undefined" value, maybe you could set a value for it to default to?
+
+==================================================
