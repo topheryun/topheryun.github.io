@@ -40,8 +40,8 @@ function createResults() {
 
 function isRareChange() {
 	var isRare = document.getElementById("is-rare").checked;
-	var other1 = document.getElementById("map-diff").selectedIndex;
-	var other2 = document.getElementById("map-type").selectedIndex;
+	// var other1 = document.getElementById("map-diff").selectedIndex;
+	// var other2 = document.getElementById("map-type").selectedIndex;
 	var dustCostOutput = document.getElementById("dust-cost");
 	
 	if (isRare) dustCostOutput.value = 210;
@@ -85,110 +85,51 @@ function calcPrices() {
 	if (!isRare) leechPrice = -40;
 	sbEarned = 0;
 	
-	//{ Changing the Leech Price value (should this be a different function?
-	if (type == 4) { //lightning
+
+	
+	if (diff == 0 || type == 0) { // default
+		leechPrice = 0;
+		leechPriceOutput.value = leechPrice;
+	}
+	
+	else if (type == 1) { // RH
+		if (diff == 1) leechPrice += 75;
+		else if (diff == 2) leechPrice += 85;
+		else if (diff == 3) leechPrice += 105;
+		else if (diff == 4) leechPrice += 160;
+		else if (diff == 5) leechPrice += 220;
+		else if (diff == 6) leechPrice += 380;
+		
+		leechPriceOutput.value = leechPrice;
+	}
+	
+	else if (type == 2) { // chrome
+		if (diff == 1 || diff == 2 || diff == 6) leechPrice = 0;
+		else if (diff == 3) leechPrice += 250;
+		else if (diff == 4) leechPrice += 375;
+		else if (diff == 5) leechPrice += 380;
+		
+		leechPriceOutput.value = leechPrice;
+	}
+	
+	else if (type == 3) { // slayer
+		if (diff == 1) leechPrice += 320;
+		else if (diff == 2) leechPrice += 400;
+		else if (diff == 3) leechPrice += 620;
+		else if (diff == 4) leechPrice += 950;
+		else if (diff == 5) leechPrice += 1600;
+		else if (diff == 6) leechPrice += 2030;
+		
+		leechPriceOutput.value = leechPrice;
+	}
+	
+	else if (type == 4) { // lightning
 		leechPrice += 1050;
 		if (isRare) leechPriceOutput.value = leechPrice; 
 		else leechPriceOutput.value = 0;
 	}
-	else if (diff == 0 || type == 0) { // default
-		leechPrice = 0;
-		leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 1 && type == 1) { // easy rh
-		leechPrice += 75;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	} 
-	else if (diff == 2 && type == 1) { // med rh
-		leechPrice += 85;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 3 && type == 1) { // hard rh
-		leechPrice += 105;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 4 && type == 1) { // elab rh
-		leechPrice += 160;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 5 && type == 1) { // ard rh
-		leechPrice += 220;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 6 && type == 1) { // elite rh
-		leechPrice += 380;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	
-	else if (diff == 1 && type == 2) { // easy chrome
-		leechPrice = 0;
-		leechPriceOutput.value = leechPrice;
-	} 
-	else if (diff == 2 && type == 2) { // med chrome
-		leechPrice = 0;
-		leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 3 && type == 2) { // hard chrome
-		leechPrice += 250;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 4 && type == 2) { // elab chrome
-		leechPrice += 375;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 5 && type == 2) { // ard chrome
-		leechPrice += 380;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 6 && type == 2) { // elite chrome
-		leechPrice = 0;
-		leechPriceOutput.value = leechPrice;
-	}
-	
-	else if (diff == 1 && type == 3) { // easy slayer
-		leechPrice += 320;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	} 
-	else if (diff == 2 && type == 3) { // med slayer
-		leechPrice += 400;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 3 && type == 3) { // hard slayer
-		leechPrice += 620;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 4 && type == 3) { // elab slayer
-		leechPrice += 950;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 5 && type == 3) { // ard slayer
-		leechPrice += 1600;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	else if (diff == 6 && type == 3) { // elite slayer
-		leechPrice += 2030;
-		if (isRare) leechPriceOutput.value = leechPrice;
-		else leechPriceOutput.value = leechPrice;
-	}
-	
-//}
 	
 	sbEarned = leechSpots * leechPrice;
-	// console.log("sbEarned: " + sbEarned);
 	profit = sbEarned - snipeTotalCostOutput.value - dustCostOutput.value;
 	profitOutput.innerHTML = `Profit: ${profit}`;
 }

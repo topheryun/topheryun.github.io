@@ -8,6 +8,7 @@ label, option { display: block; }
 #input-message { padding-top: 10px; padding-bottom: 10px; }
 
 #left { float: left; width: 35%; height: 100%; }
+#left p { font-size: 14px; }
 #right { float: right; width: 35%; height: 100%; }
 #middle { float: left; width: 30%; height: 100%; }
 
@@ -35,7 +36,7 @@ label, option { display: block; }
 #dust-cost { width: 75%; }
 
 /* left side */
-#input-div { padding: 25px; height: 420px; width: 303px; }
+#input-div { padding: 25px; height: 375px; width: 303px; }
 #input { float: top; position: relative; }
 #input-button { float: top; position: relative; }
 
