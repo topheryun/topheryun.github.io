@@ -66,27 +66,29 @@
 	
 		<div id="leech-price-div"> <!-- how much you charge for leech -->
 			<label for="leech-price">Leech Price:</label>
-			<input type="text" id="leech-price" value=0>
+			<input type="text" id="leech-price" onchange="leechPriceChange()" value=0>
 		</div>
 		
 		<div id="leech-spots-div"> <!-- how many spots you are selling -->
 			<label for="leech-spots">Leech Spots:</label>
-			<input type="text" id="leech-spots" value=4>
+			<input type="text" id="leech-spots" onchange="leechSpotsChange()" value=4>
 		</div>
 		
 		<div id="snipe-cost-div"> <!-- how much sb you spend on snipes -->
 			<label for="snipe-cost">Snipe Costs:</label>
-			<input type="text" id="snipe-cost" value=0>
+			<input type="text" id="snipe-cost" onchange="snipeCostChange()" value=0>
 		</div>
 		
 		<div id="dust-cost-div"> <!-- How much RMD costs -->
 			<label for="dues-cost">Dust Cost:</label>
-			<input type="text" id="dust-cost" value=210>
+			<input type="text" id="dust-cost" onchange="dustCostChange()" value=210>
 		</div>
 		
 	</div>
 
 	<p id="profit">Profit: 0</p>
+	<br><br>
+	<p id="tip">Tip: Set the first row before the second row. If you set custom values, then switch the map settings, it will reset your custom values.</p>
 
 	
 

@@ -1,5 +1,5 @@
 
-body { background-color: #43464b; margin-left: 150px; margin-right: 150px; }
+body { font-family: "Tahoma", Geneva, sans-serif; background-color: #43464b; margin-left: 150px; margin-right: 150px; }
 h1 { color: white; }
 h2 { color: white; }
 p { color: white; }
@@ -15,6 +15,7 @@ label, option { display: block; }
 /* middle */
 #map-select-div { position: relative; float: top; width: 100%; height: 50px; }
 #map-select-div label { color: white; }
+#tip { font-size: 14px; }
 
 #is-rare-div { height: 100%; width: 20%; float: left; }
 #map-diff-div { height: 100%; width: 35%; float: left; }
@@ -41,7 +42,7 @@ label, option { display: block; }
 #input-button { float: top; position: relative; }
 
 /* right side */
-#results { color: rgb(236, 213, 213); border-collapse: collapse; border: 1px; width: 75%; }
+#results { color: white; border-collapse: collapse; border: 1px; width: 75%; }
 #results th { border: 1px solid #ddd; background: #4CAF50; padding: 8px; }
 #results td { border: 1px solid #ddd; padding: 5px; }
 
