@@ -28,6 +28,13 @@ Indigenous Mice
 	["Master Burglar", defaultValue],
 	["Captain Croissant", defaultValue],
 	["Pirate", defaultValue],
+	["Black Widow", 120],
+	
+	["Winter Games", defaultValue],
+	["Trampoline", defaultValue],
+	["Hurdle", defaultValue],
+	["Wave Racer", defaultValue],
+	["Extreme Everysports", defaultValue],
 	
 /* ==============================
 Mountain Mice
