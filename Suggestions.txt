@@ -15,3 +15,7 @@ Even better would be values over time ... so that I know when is a good time to 
 I'd probably try and do some kind of rolling average, that eliminates outliers. Like average the last 10 icewings (that have gone for, say, 170-200), but if someone enters in 10 or 400, ignore those entries.
 
 ==================================================
+
+Some of the mice have an "undefined" value, maybe you could set a value for it to default to?
+
+==================================================
