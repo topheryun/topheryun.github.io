@@ -11,7 +11,9 @@
 
 <h2 id="input-message">Input mice from your treasure map.</h2>
 
-<div id="left">
+<div id="left"> <!-- *** LEFT *** -->
+			<!--onchange="createResults()" 
+			onkeydown="createResults()"-->
 
 	<div id="input-div"> <!-- try onkeydown instead of onchange -->
 		<textarea id="input" rows="25" cols="40" onchange="createResults()"></textarea>
@@ -24,11 +26,72 @@
 	
 </div>
 
-<div id="middle">
-	<p></p>
+<div id="middle"> <!-- *** MIDDLE *** -->
+	<div id="map-select-div">
+		<div id="is-rare-div"> <!-- rare checkbox -->
+			<label for="is-rare">Rare?</label>
+			<input type="checkbox" id="is-rare" name="is-rare" value="is-rare"
+				onchange="isRareChange()" checked>
+		</div>
+		
+		<div id="map-diff-div"> <!-- map difficulty -->
+			<label for="map-diff">Difficulty:</label>
+			<select name="map-diff" id="map-diff" onchange="mapDiffChange()">
+				<option value="blank-map-diff"></option>
+				<option value="Easy">Easy</option>
+				<option value="Medium">Medium</option>
+				<option value="Hard">Hard</option>
+				<option value="Elaborate">Elaborate</option>
+				<option value="Arduous">Arduous</option>
+				<option value="Elite">Elite</option>
+			</select>
+		</div>
+	
+		<div id="map-type-div"> <!-- map type -->
+			<label for="map-type">Map Type:</label>
+			<select name="map-type" id="map-type" onchange="mapTypeChange()">
+				<option value="blank-map-type"></option>
+				<option value="RH">Relic Hunter</option>
+				<option value="Chrome">Chrome</option>
+				<option value="Slayer">Slayer</option>
+				<option value="Lightning">Lightning</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="prices-div">
+	
+		<div id="leech-price-div"> <!-- how much you charge for leech -->
+			<label for="leech-price">Leech Price:</label>
+			<input type="text" id="leech-price" value=0>
+		</div>
+		
+		<div id="leech-spots-div"> <!-- how many spots you are selling -->
+			<label for="leech-spots">Leech Spots:</label>
+			<input type="text" id="leech-spots" value=4>
+		</div>
+		
+		<div id="snipe-cost-div"> <!-- how much sb you spend on snipes -->
+			<label for="snipe-cost">Snipe Costs:</label>
+			<input type="text" id="snipe-cost" value=0>
+		</div>
+		
+		<div id="dust-cost-div"> <!-- How much RMD costs -->
+			<label for="dues-cost">Dust Cost:</label>
+			<input type="text" id="dust-cost" value=210>
+		</div>
+		
+	</div>
+
+	<p id="profit">Profit: </p>
+
+	
+
+	
+
 </div>
 
-<div id="right">
+<div id="right"> <!-- *** RIGHT *** -->
 
 	<table id="results">
 		<tr> <!-- first row -->

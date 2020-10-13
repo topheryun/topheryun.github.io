@@ -3,12 +3,36 @@ body { background-color: #43464b; margin-left: 150px; margin-right: 150px; }
 h1 { color: white; }
 h2 { color: white; }
 p { color: white; }
+label, option { display: block; }
 
 #input-message { padding-top: 10px; padding-bottom: 10px; }
 
 #left { float: left; width: 35%; height: 100%; }
 #right { float: right; width: 35%; height: 100%; }
 #middle { float: left; width: 30%; height: 100%; }
+
+/* middle */
+#map-select-div { position: relative; float: top; width: 100%; height: 50px; }
+#map-select-div label { color: white; }
+
+#is-rare-div { height: 100%; width: 20%; float: left; }
+#map-diff-div { height: 100%; width: 35%; float: left; }
+#map-type-div { height: 100%; width: 35%; float: left; }
+
+#prices-div { position: relative; float: top; width: 100%; height: 100px; }
+#prices-div label { color: white; }
+
+#leech-price-div { float: left; position: relative; width: 20%; height: 100%; }
+#leech-price { width: 75%; }
+
+#leech-spots-div { float: left; position: relative; width: 20%; height: 100%; }
+#leech-spots { width: 75%; }
+
+#snipe-cost-div { float: left; position: relative; width: 20%; height: 100%; }
+#snipe-cost { width: 75%; }
+
+#dust-cost-div { float: left; position: relative; width: 20%; height: 100%; }
+#dust-cost { width: 75%; }
 
 /* left side */
 #input-div { padding: 25px; height: 420px; width: 303px; }
@@ -19,3 +43,6 @@ p { color: white; }
 #results { color: rgb(236, 213, 213); border-collapse: collapse; border: 1px; width: 75%; }
 #results th { border: 1px solid #ddd; background: #4CAF50; padding: 8px; }
 #results td { border: 1px solid #ddd; padding: 5px; }
+
+
+#test {float: bottom;}
