@@ -234,7 +234,7 @@ Tribal Isles
 /* ==============================
 Jungle of Dread and Dracano
 ============================== */
-	["PygmyWrangler", 30],
+	["Pygmy Wrangler", 30],
 	["Swarm of Pygmy Mice", defaultValue],
 	["Primal", defaultValue],
 	["Stonework Warrior", defaultValue],
@@ -360,7 +360,7 @@ Iceberg
 	["Wolfskie", defaultValue],
 	["Snowblind", defaultValue],
 	["Snow Sniper", defaultValue],
-	["Living Ice", 10],
+	["Living Ice", 20],
 	
 	["Chipper", defaultValue], // Tunnel Rat
 	["Icebreaker", defaultValue],
