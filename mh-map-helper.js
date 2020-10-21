@@ -126,7 +126,12 @@ function calcLeechPrice() {
 	var diff = document.getElementById("map-diff").selectedIndex;
 	var type = document.getElementById("map-type").selectedIndex;
 	
-	if (diff == 0 || type == 0) { // default
+	if (type == 4) { // lightning
+		leechPrice += 1050;
+		leechPriceOutput.value = leechPrice; 
+	}
+	
+	else if (diff == 0 || type == 0) { // default
 		leechPrice = 0;
 		leechPriceOutput.value = leechPrice;
 	}
@@ -160,12 +165,6 @@ function calcLeechPrice() {
 		else if (diff == 6) leechPrice += 2030;
 		
 		leechPriceOutput.value = leechPrice;
-	}
-	
-	else if (type == 4) { // lightning
-		leechPrice += 1050;
-		if (isRare) leechPriceOutput.value = leechPrice; 
-		else leechPriceOutput.value = 0;
 	}
 }
 
