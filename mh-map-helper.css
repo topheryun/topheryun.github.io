@@ -1,7 +1,8 @@
 
 body { font-family: "Tahoma", Geneva, sans-serif; background-color: #43464b; margin-left: 150px; margin-right: 150px; }
 h1 { color: white; }
-h2 { color: white; }
+h2 { color: white; margin: 0; padding: 0; }
+h3 { color: white; margin: 0; padding: 0; }
 p { color: white; }
 label, option { display: block; }
 
@@ -35,6 +36,8 @@ label, option { display: block; }
 
 #dust-cost-div { float: left; position: relative; width: 20%; height: 100%; }
 #dust-cost { width: 75%; }
+
+#text-div { width: 90%; }
 
 /* left side */
 #input-div { padding: 25px; height: 375px; width: 303px; }
