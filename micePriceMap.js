@@ -687,7 +687,7 @@ Zokor
 	["Retired Minotaur", 350],
 
 /* ==============================
-Zokor
+Moussu Picchu
 ============================== */	
 	["Nightshade Maiden", defaultValue],
 	["Spore Salesman", defaultValue],
