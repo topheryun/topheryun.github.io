@@ -16,7 +16,7 @@ label, option { display: block; }
 /* middle */
 #map-select-div { position: relative; float: top; width: 100%; height: 50px; }
 #map-select-div label { color: white; }
-#tip { font-size: 14px; }
+#tip { font-size: 14px; width: 90%; }
 
 #is-rare-div { height: 100%; width: 20%; float: left; }
 #map-diff-div { height: 100%; width: 35%; float: left; }
