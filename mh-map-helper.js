@@ -7,6 +7,9 @@ var leechPrice = 0;
 var dustCost = 210;
 
 window.onload=function() {
+	document.querySelector("#copy-discord").onclick = function() {
+		copyToClipboard();
+	}
 	
 	// when user presses "enter" in text area, it calls createResults()
 	document.getElementById("input")
@@ -49,6 +52,106 @@ window.onload=function() {
 		}
 	});
 	
+}
+
+function createMiceList() {
+	var miceList = "LF Snipers:";
+	
+	var textArea = document.getElementById("input");
+  var lines = textArea.value.split("\n");
+	var zones = [];
+	var list = [];
+	
+	for (var i = 0; i < lines.length; i++) {
+		zones[i] = miceCategory.get(lines[i]);
+		list.push({
+			'category': zones[i],
+			'value': miceCategoryValues.get(zones[i]),
+			'mouse': lines[i]
+		});
+	}
+	
+	list.sort(function(a,b) {
+		return ((a.value < b.value) ? -1 : ((a.value == b.value) ? 0 : 1));
+	});
+	
+	//console.log(list);
+	
+	miceList = createMiceListDiscord(miceList, list);
+	// Future: add option for shortened names
+
+	return miceList;
+}
+
+function createMiceListDiscord(miceList, list) {
+
+	for (var i = 0; i < list.length; i++) {
+		if (i == 0) {
+			miceList += "\n**" + list[i].category + ":**";
+		}
+		else if (list[i].category != list[i-1].category && list[i].category != "") {
+			miceList += "\n**" + list[i].category + ":**";
+		}
+		
+		if (i == 0)
+			miceList += " " + shortenMouseName(list[i].mouse) + " " + miceValues.get(list[i].mouse);
+		else if (i > 0 && list[i].category != "") {
+			if (list[i].category == list[i-1].category)
+				miceList += ", " + shortenMouseName(list[i].mouse) + " " + miceValues.get(list[i].mouse);
+			else 
+				miceList += " " + shortenMouseName(list[i].mouse) + " " + miceValues.get(list[i].mouse);
+		}
+	}
+	
+	return miceList;
+}
+
+function shortenMouseName(mouseName) {
+	switch (mouseName) {
+		case "Mousevina von Vermin":
+			mouseName = "Mousevina";
+			break;
+		case "Balack the Banished":
+			mouseName = "Balack";
+			break;
+		case "Zurreal the Eternal":
+			mouseName = "Zurreal";
+			break;
+		case "Inferna, The Engulfed":
+			mouseName = "Inferna";
+			break;
+		case "Nachous, The Molten":
+			mouseName = "Nachous";
+			break;
+		case "Corky, the Collector":
+			mouseName = "Corky";
+			break;
+		case "Bruticus, the Blazing":
+			mouseName = "Bruticus";
+			break;
+		case "Stormsurge, the Vile Tempest":
+			mouseName = "Stormsurge";
+			break;
+		case "Kalor'ignis of the Geyser":
+			mouseName = "Kalor";
+			break;
+		case "Ful'Mina, The Mountain Queen":
+			mouseName = "Ful'Mina";
+			break;
+
+		default:
+			break;
+	}
+	return mouseName;
+}
+
+function copyToClipboard() {
+	var tempInput = document.createElement("textarea");
+	tempInput.value = createMiceList();
+	document.body.appendChild(tempInput);
+	tempInput.select();
+	document.execCommand("copy");
+	document.body.removeChild(tempInput);
 }
 
 function createResults() {
@@ -172,7 +275,7 @@ function calcProfit() {
 	var profitOutput = document.getElementById("profit");
 	sbEarned = leechSpots * leechPrice;
 	
-	console.log("dustCost: " + dustCost);
+	// console.log("dustCost: " + dustCost);
 	
 	profit = sbEarned - snipeTotalCost - dustCost;
 	profitOutput.innerHTML = `Profit: ${profit}`;
