@@ -12,11 +12,14 @@ label, option { display: block; }
 #left p { font-size: 14px; }
 #right { float: right; width: 35%; height: 100%; }
 #middle { float: left; width: 30%; height: 100%; }
+#row:after { content: ""; display: table; clear: both; }
+#bottom { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px; padding-bottom: 30px; position: relative; float: top; width: 100%; height: 100%; font-size: 13px; }
 
 /* middle */
 #map-select-div { position: relative; float: top; width: 100%; height: 50px; }
 #map-select-div label { color: white; }
 #tip { font-size: 14px; width: 90%; }
+#scav-warning { font-size: 14px; width: 90%; }
 
 #is-rare-div { height: 100%; width: 20%; float: left; }
 #map-diff-div { height: 100%; width: 35%; float: left; }
@@ -37,8 +40,6 @@ label, option { display: block; }
 #dust-cost-div { float: left; position: relative; width: 20%; height: 100%; }
 #dust-cost { width: 75%; }
 
-#text-div { width: 90%; }
-
 /* left side */
 #input-div { padding: 25px; height: 375px; width: 303px; }
 #input { float: top; position: relative; }
@@ -49,5 +50,11 @@ label, option { display: block; }
 #results th { border: 1px solid #ddd; background: #4CAF50; padding: 8px; }
 #results td { border: 1px solid #ddd; padding: 5px; }
 
+/* bottom side */
+#bottom p { margin: 0; padding: 0; }
+#bottom a:link { color: lightblue; }
+#bottom a:visited { color: violet; }
+#bottom a:hover {color: lightblue; }
+#bottom a:active { color: pink; }
 
 #test {float: bottom;}
