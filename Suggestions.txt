@@ -16,6 +16,4 @@ I'd probably try and do some kind of rolling average, that eliminates outliers. 
 
 ==================================================
 
-Some of the mice have an "undefined" value, maybe you could set a value for it to default to?
 
-==================================================
