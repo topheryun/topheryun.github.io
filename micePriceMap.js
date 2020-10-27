@@ -243,7 +243,7 @@ Jungle of Dread and Dracano
 	["Magma Carrier", defaultValue],
 	["Fetid Swamp", defaultValue],
 	["Whelpling", defaultValue],
-	["Dracnoic Warden", 10],
+	["Draconic Warden", 10],
 	["Dragon", 10],
 	
 /* ==============================
