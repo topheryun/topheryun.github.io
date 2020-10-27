@@ -284,7 +284,7 @@ let miceCategoryValues = new Map([
         ["Magma Carrier", "Jungle of Dread"],
         ["Fetid Swamp", "Jungle of Dread"],
         ["Whelpling", "Dracano"],
-        ["Dracnoic Warden", "Dracano"],
+        ["Draconic Warden", "Dracano"],
         ["Dragon", "Dracano"],
         
     /* ==============================
