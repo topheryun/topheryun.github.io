@@ -7,9 +7,14 @@ var leechPrice = 0;
 var dustCost = 210;
 
 window.onload=function() {
-	document.querySelector("#copy-discord").onclick = function() {
-		copyToClipboard();
+	document.querySelector("#copy-discord-locations").onclick = function() {
+		copyToClipboard("discordLocations");
 	}
+	
+	document.querySelector("#copy-discord-no-locations").onclick = function() {
+		copyToClipboard("discordNoLocations");
+	}
+	
 	
 	// when user presses "enter" in text area, it calls createResults()
 	document.getElementById("input")
@@ -54,11 +59,17 @@ window.onload=function() {
 	
 }
 
-function undoScavWarning() {
+
+function UndoScavWarning() {
 	document.getElementById("scav-warning").innerHTML = "";
 }
 
-function createMiceList() {
+function ScavWarning() {
+	document.getElementById("scav-warning").innerHTML = 
+	"Waiting on MHCT tools to publish Elite loot.";
+}
+
+function createMiceList(option) {
 	var miceList = "__LF Snipers:__";
 	
 	var textArea = document.getElementById("input");
@@ -80,11 +91,25 @@ function createMiceList() {
 		return ((a.value < b.value) ? -1 : ((a.value == b.value) ? 0 : 1));
 	});
 	
-	console.log(list);
+	// console.log(list);
 	
-	miceList = createMiceListDiscord(miceList, list);
+	if (option == "discordLocations") {
+		miceList = createMiceListDiscord(miceList, list);
+	}
+	else if (option == "discordNoLocations") {
+		miceList = createMiceListNoLocationsDiscord(miceList, list);
+	}
+	
 	// Future: add option for shortened names
 
+	return miceList;
+}
+
+function createMiceListNoLocationsDiscord(miceList, list) {
+	for (var i = 0; i < list.length; i++) {
+		if (list[i].category != "")
+			miceList += "\n" + shortenMouseName(list[i].mouse) + " " + miceValues.get(list[i].mouse);
+	}
 	return miceList;
 }
 
@@ -150,9 +175,9 @@ function shortenMouseName(mouseName) {
 	return mouseName;
 }
 
-function copyToClipboard() {
+function copyToClipboard(option) {
 	var tempInput = document.createElement("textarea");
-	tempInput.value = createMiceList();
+	tempInput.value = createMiceList(option);
 	document.body.appendChild(tempInput);
 	tempInput.select();
 	document.execCommand("copy");
@@ -160,32 +185,29 @@ function copyToClipboard() {
 }
 
 function createResults() {
-		var snipeTotalCostOutput = document.getElementById("snipe-cost");
+	var snipeTotalCostOutput = document.getElementById("snipe-cost");
     var list = document.getElementById("result");
     list.innerHTML = "<tr></tr>";
     var textArea = document.getElementById("input");
     var lines = textArea.value.split("\n");
     var value;
-		snipeTotalCost = 0;
+	snipeTotalCost = 0;
 
     for (var i = 0; i < lines.length; i++) {
         if (lines[i] != "") {
             value = miceValues.get(lines[i]);
-				if (isNaN(value)) {
-					snipeTotalCost += 0;
-					value = "Error: Could Not Find!";
-				}
-				else {
-					snipeTotalCost += value;
-				}
-            	list.innerHTML += `<tr><td>${lines[i]}</td><td>${value}</td></tr>`;
+			if (isNaN(value)) {
+				snipeTotalCost += 0;
+				value = "Error: Could Not Find!";
+			}
+			else snipeTotalCost += value;
+            list.innerHTML += `<tr><td>${lines[i]}</td><td>${value}</td></tr>`;
         }
-
     }
-		snipeTotalCostOutput.value = snipeTotalCost;
-		calcPrices(0);
-		
-		// console.log(snipeTotalCost);
+	snipeTotalCostOutput.value = snipeTotalCost;
+	calcPrices(0);
+	
+	// console.log(snipeTotalCost);
 }
 
 function isRareChange() {
@@ -216,6 +238,20 @@ function mapTypeChange() {
 	var e = document.getElementById("map-type");
 	//var strUser = e.options[e.selectedIndex].text;
 	var other = document.getElementById("map-diff").selectedIndex;
+	var leechSpotsOutput = document.getElementById("leech-spots");
+	
+	if (e.selectedIndex == 5) {
+		ScavWarning();
+		leechSpots = 5;
+		leechSpotsOutput.value = 5;
+	}
+	else {
+		UndoScavWarning();
+		leechSpots = 4;
+		leechSpotsOutput.value = 4;
+	}
+	
+	console.log("leech spots: " + leechSpots);
 	
 	if (other != 0 || e.selectedIndex == 4) calcPrices(0);
 	
@@ -277,6 +313,17 @@ function calcLeechPrice() {
 		else if (diff == 4) leechPrice += 950;
 		else if (diff == 5) leechPrice += 1600;
 		else if (diff == 6) leechPrice += 2030;
+		
+		leechPriceOutput.value = leechPrice;
+	}
+	
+	else if (type == 5) { // scavenger
+		if (diff == 1) leechPrice += 75;
+		else if (diff == 2) leechPrice += 85;
+		else if (diff == 3) leechPrice += 105;
+		else if (diff == 4) leechPrice += 160;
+		else if (diff == 5) leechPrice += 220;
+		else if (diff == 6) leechPrice += 380;
 		
 		leechPriceOutput.value = leechPrice;
 	}
