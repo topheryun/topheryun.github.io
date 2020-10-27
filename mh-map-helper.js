@@ -54,8 +54,12 @@ window.onload=function() {
 	
 }
 
+function undoScavWarning() {
+	document.getElementById("scav-warning").innerHTML = "";
+}
+
 function createMiceList() {
-	var miceList = "LF Snipers:";
+	var miceList = "__LF Snipers:__";
 	
 	var textArea = document.getElementById("input");
   var lines = textArea.value.split("\n");
@@ -64,6 +68,7 @@ function createMiceList() {
 	
 	for (var i = 0; i < lines.length; i++) {
 		zones[i] = miceCategory.get(lines[i]);
+		if (zones[i] === undefined) zones[i] = "";
 		list.push({
 			'category': zones[i],
 			'value': miceCategoryValues.get(zones[i]),
@@ -75,7 +80,7 @@ function createMiceList() {
 		return ((a.value < b.value) ? -1 : ((a.value == b.value) ? 0 : 1));
 	});
 	
-	//console.log(list);
+	console.log(list);
 	
 	miceList = createMiceListDiscord(miceList, list);
 	// Future: add option for shortened names
@@ -166,8 +171,14 @@ function createResults() {
     for (var i = 0; i < lines.length; i++) {
         if (lines[i] != "") {
             value = miceValues.get(lines[i]);
-						snipeTotalCost += value;
-            list.innerHTML += `<tr><td>${lines[i]}</td><td>${value}</td></tr>`;
+				if (isNaN(value)) {
+					snipeTotalCost += 0;
+					value = "Error: Could Not Find!";
+				}
+				else {
+					snipeTotalCost += value;
+				}
+            	list.innerHTML += `<tr><td>${lines[i]}</td><td>${value}</td></tr>`;
         }
 
     }
