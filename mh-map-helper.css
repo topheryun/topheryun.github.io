@@ -40,6 +40,8 @@ label, option { display: block; }
 #dust-cost-div { float: left; position: relative; width: 20%; height: 100%; }
 #dust-cost { width: 75%; }
 
+#scav-warning { color: red; }
+
 /* left side */
 #input-div { padding: 25px; height: 375px; width: 303px; }
 #input { float: top; position: relative; }
